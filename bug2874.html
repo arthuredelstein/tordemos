@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>
+     Demonstrating bug 2874
+  </title>
+</head>
+<body>
+  Running script:
+  <pre id="scriptDisplay">
+  </pre>
+  Detected members of Components.interfaces:
+  <pre id="results">
+  </pre>
+  <script id="demoScript">
+    var results = [i for (i in Components.interfaces)].join("\n");
+    document.getElementById("results").innerHTML = results;
+  </script>
+  <script>
+    document.getElementById("scriptDisplay").innerHTML = document.getElementById("demoScript").innerHTML.trim();
+  </script>
+</body>
+</html>

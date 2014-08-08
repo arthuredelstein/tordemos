@@ -6,14 +6,14 @@
 </head>
 <body>
   Running script:
-  <pre id="scriptDisplay">
-  </pre>
+  <pre id="scriptDisplay"></pre>
   Results (detected members of Components.interfaces):
-  <pre id="results">
-  </pre>
+  <pre id="results"></pre>
+  
   <script id="demoScript">
     var results = Object.getOwnPropertyNames(Components.interfaces).join("\n");
   </script>
+  
   <script>
     document.getElementById("results").innerHTML = results;
     document.getElementById("scriptDisplay").innerHTML = document.getElementById("demoScript").innerHTML.trim();

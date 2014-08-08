@@ -12,7 +12,7 @@
   <pre id="results">
   </pre>
   <script id="demoScript">
-    var results = [i for (i in Components.interfaces)].join("\n");
+    var results = Object.getOwnPropertyNames(Components.interfaces).join("\n");
   </script>
   <script>
     document.getElementById("results").innerHTML = results;

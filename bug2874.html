@@ -11,7 +11,9 @@
   <pre id="results"></pre>
   
   <script id="demoScript">
-    var results = Object.getOwnPropertyNames(Components.interfaces).join("\n");
+    var results = (typeof Components === "undefined") ?
+                  "Components is undefined" :
+                  Object.getOwnPropertyNames(Components.interfaces).join("\n");
   </script>
   
   <script>

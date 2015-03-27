@@ -8,7 +8,7 @@ print("""
  <head>
   <style>
     div.dimension {
-      display: none;
+      display: inline-block;
       width: 100px;
       height: 60px;
     }
@@ -18,15 +18,13 @@ for i in range(maxSize):
   print(
 """
     @media (width: {0}px) {{
-      #w{0} {{
-        display: inline-block;
+      #w {{
         background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim=x");
       }}
     }}
 
     @media (height: {0}px) {{
-      #h{0} {{
-        display: inline-block;
+      #h {{
         background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim=y");
       }}
     }}
@@ -38,23 +36,11 @@ print("""
  <body>
 """)
 
-for i in range(maxSize):
-  print(
-"""
-<div id="w{0}" class="dimension"></div>
-""".format(i))
-
 print("""
-<img src="http://dummyimage.com/60x60/fff/000&text=x"></img>
-""")
+  <div id="w" class="dimension"></div>
+  <img src="http://dummyimage.com/60x60/fff/000&text=x"></img>
+  <div id="h" class="dimension"></div>
 
-for i in range(maxSize):
-  print(
-"""
-<div id="h{0}" class="dimension"></div>
-""".format(i))
-
-print("""
  </body>
 </html>
 """)

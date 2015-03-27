@@ -7,39 +7,25 @@ print("""
 <html>
  <head>
   <style>
-    div.dimension {
-      display: inline-block;
-      width: 100px;
-      height: 60px;
-    }
+   div.dimension {
+     display: inline-block;
+     width: 100px;
+     height: 60px;
+   }
 """)
 
-for i in range(maxSize):
-  print(
-"""
-    @media (width: {0}px) {{
-      #w {{
-        background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim=x");
-      }}
-    }}
-
-    @media (height: {0}px) {{
-      #h {{
-        background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim=y");
-      }}
-    }}
-""".format(i))
+for dim in ["width","height"]:
+  for i in range(maxSize):
+    print("""   @media ({1}: {0}px) {{ #{1} {{ background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim={1}"); }} }}""".format(i, dim))
 
 print("""
   </style>
  </head>
  <body>
-""")
 
-print("""
-  <div id="w" class="dimension"></div>
+  <div id="width" class="dimension"></div>
   <img src="http://dummyimage.com/60x60/fff/000&text=x"></img>
-  <div id="h" class="dimension"></div>
+  <div id="height" class="dimension"></div>
 
  </body>
 </html>

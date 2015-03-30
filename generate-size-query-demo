@@ -2,31 +2,6 @@
 
 maxSize = 2000
 
-print("""
-<!DOCTYPE html>
-<html>
- <head>
-  <style>
-   div.dimension {
-     display: inline-block;
-     width: 100px;
-     height: 60px;
-   }
-""")
-
 for dim in ["width","height"]:
   for i in range(maxSize):
-    print("""   @media ({1}: {0}px) {{ #{1} {{ background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim={1}"); }} }}""".format(i, dim))
-
-print("""
-  </style>
- </head>
- <body>
-
-  <div id="width" class="dimension"></div>
-  <img src="http://dummyimage.com/60x60/fff/000&text=x"></img>
-  <div id="height" class="dimension"></div>
-
- </body>
-</html>
-""")
+    print("""@media ({1}: {0}px) {{ #{1} {{ background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim={1}"); }} }}""".format(i, dim))

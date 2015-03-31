@@ -7,7 +7,7 @@
  <body>
   <p id="result"></p>
   <script>
-   var worker = new SharedWorker("sharedworker-demo.js");
+   var worker = new SharedWorker("https://arthuredelstein.github.io/tordemos/sharedworker-demo.js");
    worker.port.onmessage = function (e) {
      document.getElementById("result").innerHTML = e.data;
    }   

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <title>SharedWorker demo</title>
+ </head>
+ <body>
+  <p id="result"></p>
+  <script>
+   var worker = new SharedWorker("sharedworker-demo.js");
+   worker.port.onmessage = function (e) {
+     document.getElementById("result").innerHTML = e.data;
+   }   
+   worker.port.start();
+  </script>
+ </body>
+</html>

@@ -4,4 +4,4 @@ maxSize = 2000
 
 for dim in ["width", "height", "device-width", "device-height"]:
   for i in range(maxSize):
-    print("""@media ({1}: {0}px) {{ #{1} {{ background-image: url("http://dummyimage.com/100x60/000/fff&text={0}&dim={1}"); }} }}""".format(i, dim))
+    print("""@media ({1}: {0}px) {{ #{1} {{ background-image: url("http://dummyimage.com/50x30/fff/000&text={0}&dim={1}"); }} }}""".format(i, dim))

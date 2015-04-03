@@ -8,12 +8,12 @@
    This is a demonstration of the Web Notification API and its failure to obey first party isolation. First open the browser console, and then give permission to this page to show notifications for this session. The browser console should show the first party results for an icon at <a href="https://www.torproject.org/images/onion.jpg">https://www.torproject.org/images/onion.jpg</a>.
   </div>
   <script>
-  </script>
-Notification.requestPermission( function(status) {
-  console.log(status); // notifications will only be displayed if "granted"
-  var n = new Notification("Web Notification API Icon Test",
+    Notification.requestPermission( function(status) {
+      console.log(status); // notifications will only be displayed if "granted"
+      var n = new Notification("Web Notification API Icon Test",
                            {body: "Check the browser console for first party domain for the accompanying icon at https://www.torproject.org/images/onion.jpg.",
                             icon: "https://www.torproject.org/images/onion.jpg"});
-});
+    });
+  </script>
  </body>
 </html>

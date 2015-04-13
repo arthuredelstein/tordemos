@@ -1,2 +1,2 @@
-var worker = new Worker("https://arthuredelstein.github.io/tordemos/webworker_xhr.js");
+var worker = new Worker("webworker_xhr.js");
 

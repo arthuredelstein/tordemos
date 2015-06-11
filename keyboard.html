@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<html>
+ <head>
+ </head>
+ <body>
+  <input type="text" id="keyInput"></input>
+  <div id="result"></div>
+  <script type="application/javascript;version=1.7">
+   let input = document.getElementById("keyInput"),
+       resultDiv = document.getElementById("result"),
+       props = ["charCode", "code", "key", "keyCode", "location", "altKey", "ctrlKey", "metaKey", "shiftKey"];
+   input.addEventListener("keydown", function (event) {
+     let result = "";
+     for (let prop of props) {
+       result += prop + ": " + event[prop] + "<br>";
+     }
+     resultDiv.innerHTML = result;
+   });
+  </script>
+ </body>
+</html>

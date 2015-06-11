@@ -4,16 +4,27 @@
  </head>
  <body>
   <input type="text" id="keyInput"></input>
-  <div id="result"></div>
+  <div id="now" style="font-family: 'Courier New', monospace; white-space: pre;"></div>
+  <div id="result" style="font-family: 'Courier New', monospace; white-space: pre; -moz-columns: 3 10em; max-width: 40em"></div>
   <script type="application/javascript;version=1.7">
    let input = document.getElementById("keyInput"),
        resultDiv = document.getElementById("result"),
-       props = ["charCode", "code", "key", "keyCode", "location", "altKey", "ctrlKey", "metaKey", "shiftKey"];
+       nowDiv = document.getElementById("now"),
+       props = ["charCode", "code", "key", "keyCode", "location", "altKey", "ctrlKey", "metaKey", "shiftKey"],
+       codes = [];
    input.addEventListener("keydown", function (event) {
-     let result = "";
+     let numericCode = event.keyCode !== 0 ? event.keyCode : event.charCode;
+     codes[numericCode] = event.code;
+     let result = "", now="";
      for (let prop of props) {
-       result += prop + ": " + event[prop] + "<br>";
+       now += prop + " = " + event[prop] + "\n";
      }
+     for (let i = 0; i < codes.length; ++i) {
+       if (codes[i] !== undefined) {
+         result += i + ": " + codes[i] + "\n";
+       }
+     }
+     nowDiv.innerHTML = now;
      resultDiv.innerHTML = result;
    });
   </script>

@@ -2,13 +2,20 @@
 <html>
  <head>
   <meta charset="UTF-8">
+  <style>
+   .result {
+     margin: 10px;
+     font-family: 'Courier New', monospace;
+     white-space: pre;
+   }
+  </style>
  </head>
  <body>
   <input type="text" id="keyInput"></input>
   <div>
-    <div id="down" style="margin: 10px; float: left; font-family: 'Courier New', monospace; white-space: pre; width=50%;"></div>
-    <div id="press" style="margin: 10px;float: left; font-family: 'Courier New', monospace; white-space: pre; width=50%;"></div>
-    <div id="up" style="margin: 10px; float: left; font-family: 'Courier New', monospace; white-space: pre; width=50%;"></div>
+    <div id="down" class="result"></div>
+    <div id="press" class="result"></div>
+    <div id="up" class="result"></div>
   </div>
   <script type="application/javascript;version=1.7">
    let input = document.getElementById("keyInput"),

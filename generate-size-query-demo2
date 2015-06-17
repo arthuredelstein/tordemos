@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+maxSize = 2000
+
+for dim in ["width", "height", "device-width", "device-height"]:
+  print("<picture>")
+  for i in range(maxSize):
+    print("<source srcset='http://dummyimage.com/50x30/fff/000&text={0}&dim={1}' media='({1}: {0}px)'>".format(i, dim))
+  print("<img src='' alt='{0}'>".format(dim))
+  print("</picture>")
+  

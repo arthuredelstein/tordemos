@@ -2,10 +2,22 @@
 
 maxSize = 2000
 
+print("""<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>test media query in picture element</title>
+</head>
+<body>""")
+
 for dim in ["width", "height", "device-width", "device-height"]:
   print("<picture>")
   for i in range(maxSize):
     print("<source srcset='http://dummyimage.com/50x30/fff/000&text={0}&dim={1}' media='({1}: {0}px)'>".format(i, dim))
   print("<img src='' alt='{0}'>".format(dim))
   print("</picture>")
-  
+
+print("""
+</body>
+</html>
+""")

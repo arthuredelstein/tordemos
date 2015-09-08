@@ -20,6 +20,7 @@
   <script type="application/javascript;version=1.7">
    let input = document.getElementById("keyInput"),
        props = ["key", "charCode", "which", "code", "keyCode", "location", "altKey", "ctrlKey", "metaKey", "shiftKey"],
+       modifierKeys = ["Alt", "AltGraph", "CapsLock", "Control", "Fn", "FnLock", "Hyper", "Meta", "NumLock", "OS", "ScrollLock", "Shift", "Super", "Symbol", "SymbolLock"],
        codes = [];
    let showKeyEvent = function (type) {
      input.addEventListener("key" + type, function (event) {
@@ -29,6 +30,13 @@
        for (let prop of props) {
          result += prop + " = " + event[prop] + "\n";
        }
+       let modifiers = [];
+       for (let modifierKey of modifierKeys) {
+         if (event.getModifierState(modifierKey)) {
+           modifiers.push(modifierKey);
+         }
+       }
+       result += "ModifierState: " + modifiers.join(", ") + "\n";
        resultDiv.innerHTML = result;
      });
    };

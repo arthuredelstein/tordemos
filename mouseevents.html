@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+  <script>
+   var lastEvent = null;
+   var eventHandler = function (e) {
+     lastEvent = e;
+   console.log(e);
+   };
+   var events = ["click", "contextmenu", "dblclick", "mousedown", "mouseenter",
+                 "mouseleave", "mousemove", "mouseout", "mouseover", "mouseup",
+                 "show", "dragdrop", "dragexit", "draggesture", "drag",
+                 "dragend", "dragenter", "dragleave", "dragover", "dragstart",
+                 "drop", "wheel"];
+   events.forEach(event => window.addEventListener(event, eventHandler));
+  </script>
+ </body>
+</html>
+

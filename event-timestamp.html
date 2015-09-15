@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Testing Event.timeStamp</title>
+ </head>
+ <body>
+  <div id="dummyLink" style="display: block;">click me</div>
+  <pre id="results"></pre>
+  <script>
+   var link = document.getElementById("dummyLink");
+   link.addEventListener("click", function (evt) {
+     var results = "";
+     results += "evt.timeStamp: " + evt.timeStamp + "\n";
+     results += "new Event('').timeStamp: " + new Event('').timeStamp + "\n";
+     results += "performance.now(): " + performance.now() + "\n";
+     var resultNode = document.getElementById("results");
+     resultNode.innerHTML = results;
+   });
+  </script>
+ </body>
+</html>
+

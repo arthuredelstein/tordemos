@@ -7,7 +7,14 @@
  <body>
   <div id="dummyLink" style="display: block;">click me</div>
   <pre id="results"></pre>
+  <pre id="workerResults"></pre>
   <script>
+   var workerFromString = s => new Worker(URL.createObjectURL(new Blob([s], {type: 'application/javascript'})));
+   var worker = workerFromString("self.onmessage=function(e){postMessage('e.timeStamp: '+e.timeStamp + ', new Event(\"\").timeStamp: ' + new Event('').timeStamp + ', performance.now(): ' + performance.now());}");
+   worker.onmessage = function (e) {
+     document.getElementById("workerResults").innerHTML = e.data;
+   }
+
    var link = document.getElementById("dummyLink");
    link.addEventListener("click", function (evt) {
      var results = "";
@@ -16,7 +23,9 @@
      results += "performance.now(): " + performance.now() + "\n";
      var resultNode = document.getElementById("results");
      resultNode.innerHTML = results;
+     worker.postMessage("blah");
    });
+
   </script>
  </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Downloading a blob</title>
+ </head>
+ <body>
+  <a id="testLink" download="test.txt">Click to download blob</a>
+  <script>
+   var blob = new Blob(["Contents of test blob"]);
+   var url = window.URL.createObjectURL(blob);
+   var link = document.getElementById("testLink");
+   link.href = url;
+  </script>
+ </body>
+</html>
+

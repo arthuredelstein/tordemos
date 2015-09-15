@@ -5,7 +5,7 @@
   <title>Downloading a blob</title>
  </head>
  <body>
-  <a id="testLink" download="test.txt">Click to download blob</a>
+  <a id="testLink" download>Click to download blob</a>
   <script>
    var blob = new Blob(["Contents of test blob"]);
    var url = window.URL.createObjectURL(blob);

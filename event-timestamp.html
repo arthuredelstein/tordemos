@@ -6,7 +6,10 @@
  </head>
  <body>
   <div id="dummyLink" style="display: block;">click me</div>
+  <br>
+  <b>Page</b>:
   <pre id="results"></pre>
+  <b>Worker</b>:
   <pre id="workerResults"></pre>
   <script>
    var workerFromString = s => new Worker(URL.createObjectURL(new Blob([s], {type: 'application/javascript'})));

@@ -8,14 +8,14 @@
   <p id="result"></p>
   <noscript>Please activate JavaScript to run this demo. </noscript>
   <script>
-    var existingCookie = document.cookie,
+    var existingItem = localStorage.getItem("testItem"),
         result = document.getElementById("result");
-    if (existingCookie) {
-      result.innerHTML = "found cookie: " + document.cookie;
+    if (existingItem) {
+      result.innerHTML = "found value: " + existingItem;
     } else {
       var randomID = "" + Math.random();
-      document.cookie = "id=" + randomID + ";expires=" + (new Date(2100,1,1).toUTCString());
-      result.innerHTML = "new cookie: " + document.cookie;
+      localStorage.setItem("testItem", randomID);
+      result.innerHTML = "new value: " + randomID;
     }
   </script>
  </body>

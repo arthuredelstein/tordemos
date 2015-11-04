@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+   @font-face {
+     font-family: "MyArial";
+     src: local("Arial");
+   }
+   @font-face {
+     font-family: "MyCourier";
+     src: local("Courier");
+   }
+   @font-face {
+     font-family: "MyTimes";
+     src: local("Times");
+   }
+   @font-face {
+     font-family: "MyNotARealFont";
+     src: local("NotARealFont");
+   }
+  </style>
+ </head>
+ <body>
+  <div style="font-family: Arial;">
+   Arial
+  </div>
+  <div style="font-family: Courier;">
+   Courier
+  </div>
+  <div style="font-family: Times;">
+   Times
+  </div>
+  <div style="font-family: NotARealFont;">
+   NotARealFont
+  </div>
+  <div style="font-family: MyArial;">
+   Arial
+  </div>
+  <div style="font-family: MyCourier;">
+   Courier
+  </div>
+  <div style="font-family: MyTimes;">
+   Times
+  </div>
+  <div style="font-family: MyNotARealFont;">
+   NotARealFont
+  </div>
+  <div>
+   <canvas id="test-canvas" width=200 height=200 style="border:1px solid #000000;">
+   </canvas>
+  </div>
+  <script version="application;javascript;version=1.7">
+   let testCanvas = document.getElementById("test-canvas");
+   let context = testCanvas.getContext("2d");
+   let i = 1;
+   for (let font of ["Arial", "Courier", "Times", "NotARealFont"]) {
+     context.font = "24px " + font;
+     context.fillText(font, 10, 25 * i);
+     ++i;
+   }
+  </script>
+  <div>Maybe svg fonts?</div>
+ </body>
+</html>
+

@@ -4,14 +4,6 @@
   <meta charset="utf-8" />
   <style type="text/css">
    @font-face {
-     font-family: "MyArial";
-     src: local("Arial");
-   }
-   @font-face {
-     font-family: "MyCourier";
-     src: local("Courier");
-   }
-   @font-face {
      font-family: "MyTimes";
      src: local("Times");
    }
@@ -22,24 +14,17 @@
   </style>
  </head>
  <body>
+<h2>CSS font-family:</h2>
   <div style="font-family: Arial;">
    Arial
   </div>
   <div style="font-family: Courier;">
    Courier
   </div>
-  <div style="font-family: Times;">
-   Times
-  </div>
   <div style="font-family: NotARealFont;">
    NotARealFont
   </div>
-  <div style="font-family: MyArial;">
-   Arial
-  </div>
-  <div style="font-family: MyCourier;">
-   Courier
-  </div>
+<h2>src: local():</h2>
   <div style="font-family: MyTimes;">
    Times
   </div>
@@ -47,6 +32,7 @@
    NotARealFont
   </div>
   <div>
+<h2>canvas:</h2>
    <canvas id="test-canvas" width=200 height=200 style="border:1px solid #000000;">
    </canvas>
   </div>
@@ -54,7 +40,7 @@
    let testCanvas = document.getElementById("test-canvas");
    let context = testCanvas.getContext("2d");
    let i = 1;
-   for (let font of ["Arial", "Courier", "Times", "NotARealFont"]) {
+   for (let font of ["Georgia", "FakeFont"]) {
      context.font = "24px " + font;
      context.fillText(font, 10, 25 * i);
      ++i;

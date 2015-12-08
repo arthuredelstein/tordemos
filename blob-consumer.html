@@ -8,6 +8,7 @@
   Please paste the blob URL:
   <input type="text" id="blobURLInput" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.js"></script>
+  <div id="result"></div>
   <script type="text/javascript;version=1.7">
    // __xhr(method, url, responseType)__.
    // A simple async XMLHttpRequest call.
@@ -56,7 +57,9 @@
    blobURLInput.addEventListener("input", function () {
      console.log(blobURLInput.value);
      co(function* () {
-       console.log(yield blobURLtoString(blobURLInput.value));
+       let result = blobURLInput.value;
+       console.log(yield blobURLtoString(result));
+       document.getElementById("result").innerHTML = result;
      });
    });
   </script>

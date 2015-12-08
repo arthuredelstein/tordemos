@@ -6,9 +6,8 @@
  </head>
  <body>
   Please paste the blob URL:
-  <input type="text" id="blobURLInput">
-  </input>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.js"></src>
+  <input type="text" id="blobURLInput" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.js"></script>
   <script type="text/javascript;version=1.7">
    // __xhr(method, url, responseType)__.
    // A simple async XMLHttpRequest call.
@@ -55,6 +54,7 @@
 
    let blobURLInput = document.getElementById("blobURLInput");
    blobURLInput.addEventListener("input", function () {
+     console.log(blobURLInput.value);
      co(function* () {
        console.log(yield blobURLtoString(blobURLInput.value));
      });

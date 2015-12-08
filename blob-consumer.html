@@ -5,7 +5,61 @@
   <title>Blob consumer</title>
  </head>
  <body>
-  <input type="text" id="blobURL">
+  Please paste the blob URL:
+  <input type="text" id="blobURLInput">
+  </input>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.js"></src>
+  <script type="text/javascript;version=1.7">
+   // __xhr(method, url, responseType)__.
+   // A simple async XMLHttpRequest call.
+   // Returns a promise with the response.
+   let xhr = function (method, url, responseType) {
+     return new Promise(function (resolve, reject) {
+       let xhr = new XMLHttpRequest();
+       xhr.open(method, url, true);
+       xhr.onload = function () {
+         resolve(xhr.response);
+       };
+       xhr.responseType = responseType;
+       xhr.send();
+     });
+   };
+
+   // __blobURLtoBlob(blobURL)__.
+   // Asynchronously retrieves a blob object
+   // from a blob URL. Returns a promise.
+   let blobURLtoBlob = function (blobURL) {
+     return xhr("GET", blobURL, "blob");
+   };
+
+   // __blobToString(blob)__.
+   // Asynchronously reads the contents
+   // of a blob object into a string. Returns a promise.
+   let blobToString = function (blob) {
+     return new Promise(function (resolve, reject) {
+       let fileReader = new FileReader();
+       fileReader.onload = function () {
+         resolve(fileReader.result);
+       };
+       fileReader.readAsText(blob);
+     });
+   };
+
+   // __blobURLtoString(blobURL)__.
+   // Asynchronous coroutine that takes a blobURL
+   // and returns the contents in a string.
+   let blobURLtoString = function* (blobURL) {
+     let blob = yield blobURLtoBlob(blobURL);
+     return yield blobToString(blob);
+   };
+
+   let blobURLInput = document.getElementById("blobURLInput");
+   blobURLInput.addEventListener("input", function () {
+     co(function* () {
+       console.log(yield blobURLtoString(blobURLInput.value));
+     });
+   });
+  </script>
  </body>
 </html>
 

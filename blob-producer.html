@@ -10,7 +10,8 @@
  <script>
   var secretData = Math.random();
   document.getElementById("secretData").innerHTML = secretData;
-  blobURI = URL
+  var blob = new Blob([secretData]);
+  blobURI = URL.createObjectURL(blob);
   document.getElementById("blobURI").innerHTML = blobURI;
   </script>
  <body>

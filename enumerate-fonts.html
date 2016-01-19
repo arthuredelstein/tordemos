@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Font enumeration demo</title>
+  <style type="text/css">
+    @font-face {
+      font-family: "EnumerationFallback";
+      src: url("EnumerationFallback.ttf");
+    }
+  </style>
+ </head>
+ <body>
+  <div><span id="testSpan" style="white-space: nowrap; font-family: EnumerationFallback;"></span></div>
+  <div><h3>Fonts found:</h3><div id="found"></div></div>
+  <div><h3>Fonts not found:</h3><div id="notfound"></div></div>
+  <script type="application/javascript;version=1.7"
+          src="task_spawn.js"></script>
+  <script type="application/javascript;version=1.7">
+    let testSpan = document.getElementById("testSpan");
+    testSpan.style.fontSize = "256px";
+
+    // Measures the width of the contents of testSpan
+    // with a given fontFamily applied.
+    let measureWidthForFont = function (fontFamily) {
+      testSpan.style.fontFamily = fontFamily;
+      return testSpan.offsetWidth;
+    };
+
+    // Determines whether a code point is available.
+    let isFontPresent = function (fontName) {
+      // Measure the font width twice: once with serif as fallback
+      // and once with sans-serif as fallback. Under the assumption
+      // that serif and sans-serif have different widths, only if
+      // the font is present will the resulting widths be equal.
+      let width1 = measureWidthForFont("'" + fontName + "', EnumerationFallback");
+      let width2 = measureWidthForFont("EnumerationFallback");
+      return width1 !== width2;
+    };
+
+    // Takes a list of possible fonts, and returns two lists:
+    // [fontsPresent, fontsAbsent]
+    let enumerateFonts = function (possibleFonts) {
+      let fontsPresent = [], fontsAbsent = [];
+      for (let font of possibleFonts) {
+        if (isFontPresent(font)) {
+          fontsPresent.push(font);
+        }  else {
+          fontsAbsent.push(font);
+        }
+      }
+      return [fontsPresent, fontsAbsent];
+    };
+
+    let htmlList = function (items) {
+      let list = "<ul>";
+      for (let item of items) {
+        list += "<li>" + item + "</li>";
+      }
+      list += "</ul>";
+      return list;
+    };
+
+    let readTextFile = function (filename) {
+      return new Promise(function (resolve) {
+        let xhr = new XMLHttpRequest();
+        xhr.overrideMimeType("text/plain; charset=utf-8");
+        xhr.open("GET", filename);
+        xhr.addEventListener("load", function () {
+          resolve(xhr.responseText);
+        });
+        xhr.send();
+      });
+    };
+
+    // Retrieves a set of code points that are representative
+    // of the various unicode blocks.xf
+    let retrieveCodePoints = function* () {
+      let text = yield readTextFile("unicodeBlocks.txt");
+      let codePoints = text
+          .split("\n")
+          .map(s => s.trim())
+          .filter(s => s.length > 0)
+          .map(x => parseInt(x))
+          .map(x => x + 1);
+      codePoints[0] = 77;
+      return codePoints;
+    };
+
+    // Returns promise resolving to an array of fonts from "fontList.txt".
+    let retrieveFontList = function* () {
+      let text = yield readTextFile("fontList.txt");
+      return text.split("\n").filter(s => s.length > 0);
+    };
+
+    spawn(function* () {
+      let codePoints = yield retrieveCodePoints();
+      let testString = codePoints.map(x => String.fromCodePoint(x)).join("</span>\n<span>");
+      testSpan.innerHTML = testString;
+      let fontList = yield retrieveFontList(),
+      [fontsPresent, fontsAbsent] = enumerateFonts(fontList);
+      testSpan.style.display = "none";
+      document.getElementById("found").innerHTML = htmlList(fontsPresent);
+      document.getElementById("notfound").innerHTML = htmlList(fontsAbsent);
+    });
+
+  </script>
+ </body>
+</html>
+

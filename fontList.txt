@@ -1,0 +1,855 @@
+.Helvetica Neue DeskInterface
+Aharoni Bold
+Al Bayan Bold
+Al Bayan Plain
+Al Nile
+Al Nile Bold
+Al Tarikh
+AlBayan
+AlBayanBold
+Aldhabi
+American Typewriter
+American Typewriter Bold
+American Typewriter Condensed
+American Typewriter Condensed Bold
+American Typewriter Condensed Light
+American Typewriter Light
+AmericanTypewriter
+Andale Mono
+Andalus
+Angsana New
+Angsana New Bold
+Angsana New Bold Italic
+Angsana New Italic
+AngsanaUPC
+AngsanaUPC Bold
+AngsanaUPC Bold Italic
+AngsanaUPC Italic
+Aparajita
+Aparajita Bold
+Aparajita Bold Italic
+Aparajita Italic
+Apple Braille
+Apple Braille Outline 6 Dot
+Apple Braille Outline 8 Dot
+Apple Braille Pinpoint 6 Dot
+Apple Braille Pinpoint 8 Dot
+Apple Chancery
+Apple Color Emoji
+Apple LiGothic Medium
+Apple LiSung Light
+Apple SD Gothic Neo Heavy
+Apple SD Gothic Neo Light
+Apple SD Gothic Neo Medium
+Apple SD Gothic Neo SemiBold
+Apple SD Gothic Neo Thin
+Apple SD Gothic Neo UltraLight
+Apple SD GothicNeo ExtraBold
+Apple Symbols
+AppleGothic
+AppleGothic Regular
+AppleMyungjo
+AppleMyungjo Regular
+AppleSDGothicNeo-Bold
+AppleSDGothicNeo-ExtraBold
+AppleSDGothicNeo-Heavy
+AppleSDGothicNeo-Light
+AppleSDGothicNeo-Medium
+AppleSDGothicNeo-Regular
+AppleSDGothicNeo-SemiBold
+AppleSDGothicNeo-Thin
+AppleSDGothicNeo-UltraLight
+AquaKana
+Arabic Typesetting
+Arial
+Arial Black
+Arial Bold
+Arial Bold Italic
+Arial Hebrew
+Arial Hebrew Bold
+Arial Hebrew Light
+Arial Italic
+Arial Narrow
+Arial Narrow Bold
+Arial Narrow Bold Italic
+Arial Narrow Italic
+Arial Rounded Bold
+Arial Rounded MT Bold
+Arial Unicode
+Arial Unicode MS
+ArialHB
+ArialHBBold
+Athelas Bold
+Athelas Bold Italic
+Athelas Italic
+Athelas Regular
+Avenir
+Avenir Next
+Avenir Next Condensed
+Ayuthaya
+Baghdad
+Bangla MN
+Bangla MN Bold
+Bangla Sangam MN
+Bangla Sangam MN Bold
+Baoli SC Regular
+Baskerville
+Baskerville Bold
+Baskerville Bold Italic
+Baskerville Italic
+Baskerville SemiBold
+Baskerville SemiBold Italic
+Batang
+BatangChe
+Beirut
+BiauKai
+Big Caslon Medium
+BigCaslon
+Browallia New
+Browallia New Bold
+Browallia New Bold Italic
+Browallia New Italic
+BrowalliaUPC
+BrowalliaUPC Bold
+BrowalliaUPC Bold Italic
+BrowalliaUPC Italic
+Brush Script
+Brush Script MT Italic
+Calibri
+Calibri Bold
+Calibri Bold Italic
+Calibri Italic
+Calibri Light
+Calibri Light Italic
+Cambria
+Cambria Bold
+Cambria Bold Italic
+Cambria Italic
+Cambria Math
+Candara
+Candara Bold
+Candara Bold Italic
+Candara Italic
+Chalkboard
+Chalkboard Bold
+Chalkboard SE Bold
+Chalkboard SE Light
+Chalkboard SE Regular
+ChalkboardSE
+Chalkduster
+Charcoal CY
+CharcoalCY.dfont
+Charter Black
+Charter Black Italic
+Charter Bold
+Charter Bold Italic
+Charter Italic
+Charter Roman
+Cochin
+Cochin Bold
+Cochin Bold Italic
+Cochin Italic
+Comic Sans MS
+Comic Sans MS Bold
+Comic Sans MS Bold Italic
+Comic Sans MS Italic
+Consolas
+Consolas Bold
+Consolas Bold Italic
+Consolas Italic
+Constantia
+Constantia Bold
+Constantia Bold Italic
+Constantia Italic
+Copperplate
+Copperplate Bold
+Copperplate Light
+Corbel
+Corbel Bold
+Corbel Bold Italic
+Corbel Italic
+Cordia New
+Cordia New Bold
+Cordia New Bold Italic
+Cordia New Italic
+CordiaUPC
+CordiaUPC Bold
+CordiaUPC Bold Italic
+CordiaUPC Italic
+Corsiva
+Corsiva Hebrew
+Corsiva Hebrew Bold
+CorsivaBold
+Courier
+Courier New
+Courier New Bold
+Courier New Bold Italic
+Courier New Italic
+Courier.dfont
+Cousine
+DFKai-SB
+DIN Alternate Bold
+DIN Condensed Bold
+Damascus
+Damascus Bold
+Damascus Medium
+Damascus Semi Bold
+DaunPenh
+David
+David Bold
+DecoType Naskh
+DecoTypeNaskh
+Devanagari MT
+Devanagari MT Bold
+Devanagari Sangam MN
+Devanagari Sangam MN Bold
+DevanagariMT
+DevanagariMTBold
+Didot
+Didot Bold
+Didot Italic
+DilleniaUPC
+DilleniaUPC Bold
+DilleniaUPC Bold Italic
+DilleniaUPC Italic
+Diwan Kufi
+Diwan Mishafi
+Diwan Thuluth
+DokChampa
+Dotum
+DotumChe
+Ebrima
+Ebrima Bold
+Estrangelo Edessa
+EucrosiaUPC
+EucrosiaUPC Bold
+EucrosiaUPC Bold Italic
+EucrosiaUPC Italic
+Euphemia
+Euphemia UCAS
+Euphemia UCAS Bold
+Euphemia UCAS Italic
+EuphemiaCAS
+FangSong
+Farah
+Farisi
+Font as shown by application
+Font name
+FrankRuehl
+Franklin Gothic Medium
+Franklin Gothic Medium Italic
+FreesiaUPC
+FreesiaUPC Bold
+FreesiaUPC Bold Italic
+FreesiaUPC Italic
+Futura
+Futura Condensed ExtraBold
+Futura Condensed Medium
+Futura Medium
+Futura Medium Italic
+GB18030 Bitmap
+Gabriola
+Gadugi
+Gadugi Bold
+Gautami
+Gautami Bold
+Geeza Pro
+Geeza Pro Bold
+Geneva
+Geneva CY
+Geneva.dfont
+GenevaCY.dfont
+Georgia
+Georgia Bold
+Georgia Bold Italic
+Georgia Italic
+Gill Sans
+Gill Sans Bold
+Gill Sans Bold Italic
+Gill Sans Italic
+Gill Sans Light
+Gill Sans Light Italic
+Gill Sans SemiBold
+Gill Sans SemiBold Italic
+Gill Sans UltraBold
+GillSans
+Gisha
+Gisha Bold
+Gujarati MT
+Gujarati MT Bold
+Gujarati Sangam MN
+Gujarati Sangam MN Bold
+GujaratiMT
+GujaratiMTBold
+Gulim
+GulimChe
+GungSeo Regular
+Gungseouche
+Gungsuh
+GungsuhChe
+Gurmukhi
+Gurmukhi MN
+Gurmukhi MN Bold
+Gurmukhi MT
+Gurmukhi Sangam MN
+Gurmukhi Sangam MN Bold
+Hannotate SC Bold
+Hannotate SC Regular
+Hannotate TC Bold
+Hannotate TC Regular
+HanziPen SC Bold
+HanziPen SC Regular
+HanziPen TC Bold
+HanziPen TC Regular
+HeadLineA Regular
+HeadlineA
+Hei
+Hei Regular
+Heiti TC
+HelveLTMM
+Helvetica
+Helvetica CY Bold
+Helvetica CY BoldOblique
+Helvetica CY Oblique
+Helvetica CY Plain
+Helvetica LT MM
+Helvetica Neue
+Helvetica.dfont
+HelveticaCY.dfont
+HelveticaNeue.dfont
+HelveticaNeueDeskUI
+Herculanum
+Hiragino Kaku Gothic Pro W3
+Hiragino Kaku Gothic Pro W6
+Hiragino Kaku Gothic ProN
+Hiragino Kaku Gothic Std W8
+Hiragino Kaku Gothic StdN W8
+Hiragino Maru Gothic Pro W4
+Hiragino Maru Gothic ProN W4
+Hiragino Mincho Pro W3
+Hiragino Mincho Pro W6
+Hiragino Sans GB W3
+Hiragino Sans GB W6
+Hoefler Text
+Hoefler Text Black
+Hoefler Text Black Italic
+Hoefler Text Italic
+Hoefler Text Ornaments
+Impact
+InaiMathi
+Iowan Old Style Black
+Iowan Old Style Black Italic
+Iowan Old Style Bold
+Iowan Old Style Bold Italic
+Iowan Old Style Italic
+Iowan Old Style Roman
+Iowan Old Style Titling
+IrisUPC
+IrisUPC Bold
+IrisUPC Bold Italic
+IrisUPC Italic
+Iskoola Pota
+Iskoola Pota Bold
+IskoolaPota-Bold
+JasmineUPC
+JasmineUPC Bold
+JasmineUPC Bold Italic
+JasmineUPC Italic
+Kai
+Kai Regular
+KaiTi
+Kailasa
+Kailasa Regular
+Kaiti SC Black
+Kaiti SC Bold
+Kaiti SC Regular
+Kaiti TC Bold
+Kaiti TC Regular
+Kalinga
+Kalinga Bold
+Kannada MN
+Kannada MN Bold
+Kannada Sangam MN
+Kannada Sangam MN Bold
+Kartika
+Kartika Bold
+Kefa
+Kefa Bold
+Kefa Regular
+Keyboard
+Khmer MN
+Khmer MN Bold
+Khmer Sangam MN
+Khmer UI
+Khmer UI Bold
+KodchiangUPC
+KodchiangUPC Bold
+KodchiangUPC Bold Italic
+KodchiangUPC Italic
+Kokila
+Kokila Bold
+Kokila Bold Italic
+Kokila Italic
+Kokonor
+Kokonor Regular
+Krungthep
+KufiStandardGK
+Lantinghei SC Demibold
+Lantinghei SC Extralight
+Lantinghei SC Heavy
+Lantinghei TC Demibold
+Lantinghei TC Extralight
+Lantinghei TC Heavy
+Lao MN
+Lao MN Bold
+Lao Sangam MN
+Lao UI
+Lao UI Bold
+LastResort
+Latha
+Latha Bold
+Leelawadee
+Leelawadee Bold
+Levenim MT
+Levenim MT Bold
+LiHei Pro
+LiSong Pro
+Libian SC Regular
+LilyUPC
+LilyUPC Bold
+LilyUPC Bold Italic
+LilyUPC Italic
+Lucida Console
+Lucida Grande
+Lucida Sans Unicode
+LucidaGrande
+MS Gothic
+MS Mincho
+MS PGothic
+MS PMincho
+MS UI Gothic
+MV Boli
+Malayalam MN
+Malayalam MN Bold
+Malayalam Sangam MN
+Malayalam Sangam MN Bold
+Malgun Gothic
+Malgun Gothic Bold
+Manage Your Profile |Contact Microsoft Typography
+Mangal
+Mangal Bold
+Marion
+Marion Bold
+Marion Italic
+Marion Regular
+MarkerFelt
+Marlett
+Meiryo
+Meiryo Bold
+Meiryo Bold Italic
+Meiryo Italic
+Meiryo UI
+Meiryo UI Bold
+Meiryo UI Bold Italic
+Meiryo UI Italic
+Menlo
+Microsoft Himalaya
+Microsoft JhengHei
+Microsoft JhengHei Bold
+Microsoft JhengHei UI
+Microsoft JhengHei UI Bold
+Microsoft New Tai Lue
+Microsoft New Tai Lue Bold
+Microsoft PhagsPa
+Microsoft PhagsPa Bold
+Microsoft Sans Serif
+Microsoft Tai Le
+Microsoft Tai Le Bold
+Microsoft Uighur
+Microsoft Uighur Bold
+Microsoft YaHei
+Microsoft YaHei Bold
+Microsoft YaHei UI
+Microsoft YaHei UI Bold
+Microsoft Yi Baiti
+MingLiU
+MingLiU-ExtB
+MingLiU_HKSCS
+MingLiU_HKSCS-ExtB
+Miriam
+Miriam Fixed
+Monaco
+Monaco.dfont
+Mongolian Baiti
+MoolBoran
+Mshtakan
+Mshtakan Bold
+Mshtakan BoldOblique
+Mshtakan Oblique
+MshtakanBold
+MshtakanBoldOblique
+MshtakanOblique
+MshtakanRegular
+Muna
+Muna Black
+Muna Bold
+Myanmar MN
+Myanmar MN Bold
+Myanmar Sangam MN
+Myanmar Text
+NISC18030
+NSimSun
+Nadeem
+Nanum Brush Script
+Nanum Pen Script
+NanumGothic
+NanumGothic Bold
+NanumGothic ExtraBold
+NanumMyeongjo
+NanumMyeongjo Bold
+NanumMyeongjo ExtraBold
+NanumScript
+Narkisim
+New Peninim MT
+New Peninim MT Bold
+New Peninim MT Bold Inclined
+New Peninim MT Inclined
+NewPeninimMT
+NewPeninimMTBold
+NewPeninimMTBoldInclined
+NewPeninimMTInclined
+Nirmala UI
+Nirmala UI Bold
+Noteworthy
+Noto Naskh Arabic
+Noto Sans Armenian
+Noto Sans Bengali
+Noto Sans Buginese
+Noto Sans CJK SC Regular
+Noto Sans Canadian Aboriginal
+Noto Sans Cherokee
+Noto Sans Devanagari
+Noto Sans Ethiopic
+Noto Sans Georgian
+Noto Sans Gujarati
+Noto Sans Gurmukhi
+Noto Sans Hebrew
+Noto Sans Kannada
+Noto Sans Khmer
+Noto Sans Lao
+Noto Sans Malayalam
+Noto Sans Mongolian
+Noto Sans Myanmar
+Noto Sans Oriya
+Noto Sans Sinhal
+Noto Sans Sinhala
+Noto Sans Tamil
+Noto Sans Telugu
+Noto Sans Thaana
+Noto Sans Thai
+Noto Sans Tibetan
+Noto Sans Yi
+Noto Serif Armenian
+Noto Serif Khmer
+Noto Serif Lao
+Noto Serif Thai
+Nyala
+Optima
+Oriya MN
+Oriya MN Bold
+Oriya Sangam MN
+Oriya Sangam MN Bold
+Osaka
+Osaka-Mono
+OsakaMono
+PCMyungjo Regular
+PCmyoungjo
+PMingLiU
+PMingLiU-ExtB
+PT Mono
+PT Mono Bold
+PT Sans
+PT Sans Bold
+PT Sans Bold Italic
+PT Sans Caption
+PT Sans Caption Bold
+PT Sans Italic
+PT Sans Narrow
+PT Sans Narrow Bold
+PT Serif
+PT Serif Bold
+PT Serif Bold Italic
+PT Serif Caption
+PT Serif Caption Italic
+PT Serif Italic
+PTSans
+Palatino
+Palatino Linotype
+Palatino Linotype Bold
+Palatino Linotype Bold Italic
+Palatino Linotype Italic
+Papyrus
+Papyrus Condensed
+PilGi Regular
+Pilgiche
+Plantagenet Cherokee
+PlantagenetCherokee
+Raanana
+Raanana Bold
+RaananaBold
+Raavi
+Raavi Bold
+Rod
+STFangsong
+STHeiti
+STHeiti Light
+STHeiti Medium
+STIX Math
+STIXGeneral
+STIXGeneral-Bold
+STIXGeneral-BoldItalic
+STIXGeneral-Italic
+STIXGeneral-Regular
+STIXGeneralBol
+STIXGeneralBolIta
+STIXGeneralItalic
+STIXIntDBol
+STIXIntDReg
+STIXIntSmBol
+STIXIntSmReg
+STIXIntUpBol
+STIXIntUpDBol
+STIXIntUpDReg
+STIXIntUpReg
+STIXIntUpSmBol
+STIXIntUpSmReg
+STIXIntegralsD-Bold
+STIXIntegralsD-Regular
+STIXIntegralsSm-Bold
+STIXIntegralsSm-Regular
+STIXIntegralsUp-Bold
+STIXIntegralsUp-Regular
+STIXIntegralsUpD-Bold
+STIXIntegralsUpD-Regular
+STIXIntegralsUpSm-Bold
+STIXIntegralsUpSm-Regular
+STIXNonUni
+STIXNonUniBol
+STIXNonUniBolIta
+STIXNonUniIta
+STIXNonUnicode-Bold
+STIXNonUnicode-Italic
+STIXNonUnicode-Regular
+STIXSizFiveSymReg
+STIXSizFourSymBol
+STIXSizFourSymReg
+STIXSizOneSymBol
+STIXSizOneSymReg
+STIXSizThreeSymBol
+STIXSizThreeSymReg
+STIXSizTwoSymBol
+STIXSizTwoSymReg
+STIXSizeFiveSym-Regular
+STIXSizeFourSym-Bold
+STIXSizeFourSym-Regular
+STIXSizeOneSym-Bold
+STIXSizeOneSym-Regular
+STIXSizeThreeSym-Bold
+STIXSizeThreeSym-Regular
+STIXSizeTwoSym-Bold
+STIXSizeTwoSym-Regular
+STIXVar
+STIXVarBol
+STIXVariants-Bold
+STIXVariants-Regular
+STKaiti
+STSong
+STXihei
+Sakkal Majalla
+Sakkal Majalla Bold
+Sana
+Sathu
+Savoye LET Plain CC.:1.0
+Savoye LET Plain:1.0
+Segoe Print
+Segoe Print Bold
+Segoe Script
+Segoe Script Bold
+Segoe UI
+Segoe UI Bold
+Segoe UI Bold Italic
+Segoe UI Italic
+Segoe UI Light
+Segoe UI Light Italic
+Segoe UI Semibold
+Segoe UI Semibold Italic
+Segoe UI Semilight
+Segoe UI Semilight Italic
+Segoe UI Symbol
+Seravek
+Seravek Bold
+Seravek Bold Italic
+Seravek ExtraLight
+Seravek ExtraLight Italic
+Seravek Italic
+Seravek Light
+Seravek Light Italic
+Seravek Medium
+Seravek Medium Italic
+Shonar Bangla
+Shonar Bangla Bold
+Shruti
+Shruti Bold
+Silom
+SimHei
+SimSun
+SimSun-ExtB
+Simplified Arabic
+Simplified Arabic Bold
+Simplified Arabic Fixed
+Sinhala MN
+Sinhala MN Bold
+Sinhala Sangam MN
+Sinhala Sangam MN Bold
+Skia
+Skia Regular
+Snell Roundhand
+Snell Roundhand Black
+Snell Roundhand Bold
+Songti SC Black
+Songti SC Bold
+Songti SC Light
+Songti SC Regular
+Songti TC Bold
+Songti TC Light
+Songti TC Regular
+Stixnonunicode
+Superclarendon Black
+Superclarendon Black Italic
+Superclarendon Bold
+Superclarendon Bold Italic
+Superclarendon Italic
+Superclarendon Light
+Superclarendon Light Italic
+Superclarendon Regular
+Sylfaen
+Symbol
+Tahoma
+Tahoma Bold
+Tahoma Negreta
+Tamil MN
+Tamil MN Bold
+Tamil Sangam MN
+Tamil Sangam MN Bold
+Telugu MN
+Telugu MN Bold
+Telugu Sangam MN
+Telugu Sangam MN Bold
+Thonburi
+ThonburiBold
+Times
+Times LT MM
+Times New Roman
+Times New Roman Bold
+Times New Roman Bold Italic
+Times New Roman Italic
+Times.dfont
+TimesLTMM
+Traditional Arabic
+Traditional Arabic Bold
+Trebuchet MS
+Trebuchet MS Bold
+Trebuchet MS Bold Italic
+Trebuchet MS Italic
+Tunga
+Tunga Bold
+Urdu Typesetting
+Utsaah
+Utsaah Bold
+Utsaah Bold Italic
+Utsaah Italic
+Vani
+Vani Bold
+Verdana
+Verdana Bold
+Verdana Bold Italic
+Verdana Italic
+Version 5.
+Version 5.00
+Version 5.01
+Version 5.02
+Version 5.03
+Version 5.05
+Version 5.06
+Version 5.11
+Version 5.22
+Version 5.61
+Version 5.62
+Version 5.90
+Version 5.91
+Version 5.92
+Version 5.93
+Version 6.00
+Version 6.02
+Version 6.11
+Version 7.00
+Vijaya
+Vijaya Bold
+Vrinda
+Vrinda Bold
+Waseem
+Waseem Light
+Wawati SC Regular
+Wawati TC Regular
+Webdings
+Weibei SC Bold
+Weibei TC Bold
+Wingdings
+Wingdings 2
+Wingdings 3
+Wingdings02-BoldItalic
+Xingkai SC Bold
+Xingkai SC Light
+Yu Gothic UI
+YuGothic Bold
+YuGothic Medium
+YuMincho Demibold
+YuMincho Medium
+Yuanti SC Bold
+Yuanti SC Light
+Yuanti SC Regular
+Yuppy SC Regular
+Yuppy TC Regular
+ZapfDingbats
+Zapfino
+ヒラギノ丸ゴ Pro W4
+ヒラギノ丸ゴ ProN W4
+ヒラギノ明朝 Pro W3
+ヒラギノ明朝 Pro W6
+ヒラギノ明朝 ProN W3
+ヒラギノ明朝 ProN W6
+ヒラギノ角ゴ Pro W3
+ヒラギノ角ゴ Pro W6
+ヒラギノ角ゴ ProN W3
+ヒラギノ角ゴ ProN W6
+ヒラギノ角ゴ Std W8
+ヒラギノ角ゴ StdN W8
+儷宋 Pro
+儷黑 Pro
+华文仿宋
+华文细黑
+华文黑体
+宋体
+微软雅黑
+新細明體
+楷体
+細明體
+雅痞-简
+雅痞-繁
+굴림
+굴림체
+바탕
+ＭＳ ゴシック
+ＭＳ 明朝
+ＭＳ Ｐゴシック
+ＭＳ Ｐ明朝a

@@ -27,6 +27,8 @@
       return testSpan.offsetWidth;
     };
 
+    // The standard width for the text string when we
+    // are only using the fallback font.
     let width0 = null;
 
     // Determines whether a code point is available.
@@ -54,6 +56,8 @@
       return [fontsPresent, fontsAbsent];
     };
 
+    // Generates an HTML list of each item
+    // in the array `items`.
     let htmlList = function (items) {
       let list = "<ul>";
       for (let item of items) {
@@ -63,6 +67,8 @@
       return list;
     };
 
+    // Reads a text file and returns a promise
+    // resolving to the contents.
     let readTextFile = function (filename) {
       return new Promise(function (resolve) {
         let xhr = new XMLHttpRequest();
@@ -95,6 +101,8 @@
       return text.split("\n").filter(s => s.length > 0);
     };
 
+    // Start the main test. Once the test has finished, hide the test string
+    // and show the results.
     spawn(function* () {
       let codePoints = yield retrieveCodePoints();
       let testString = codePoints.map(x => String.fromCodePoint(x)).join("</span>\n<span>");

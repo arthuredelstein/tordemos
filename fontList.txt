@@ -83,6 +83,7 @@ Athelas Bold
 Athelas Bold Italic
 Athelas Italic
 Athelas Regular
+Avant Garde
 Avenir
 Avenir Next
 Avenir Next Condensed
@@ -103,8 +104,11 @@ Batang
 BatangChe
 Beirut
 BiauKai
+Big Caslon
 Big Caslon Medium
 BigCaslon
+Bodoni MT
+Book Antiqua
 Browallia New
 Browallia New Bold
 Browallia New Bold Italic
@@ -114,6 +118,7 @@ BrowalliaUPC Bold
 BrowalliaUPC Bold Italic
 BrowalliaUPC Italic
 Brush Script
+Brush Script MT
 Brush Script MT Italic
 Calibri
 Calibri Bold
@@ -121,6 +126,7 @@ Calibri Bold Italic
 Calibri Italic
 Calibri Light
 Calibri Light Italic
+Calisto MT
 Cambria
 Cambria Bold
 Cambria Bold Italic
@@ -130,6 +136,7 @@ Candara
 Candara Bold
 Candara Bold Italic
 Candara Italic
+Century Gothic
 Chalkboard
 Chalkboard Bold
 Chalkboard SE Bold
@@ -251,6 +258,7 @@ GB18030 Bitmap
 Gabriola
 Gadugi
 Gadugi Bold
+Garamond
 Gautami
 Gautami Bold
 Geeza Pro
@@ -275,6 +283,7 @@ Gill Sans UltraBold
 GillSans
 Gisha
 Gisha Bold
+Goudy Old Style
 Gujarati MT
 Gujarati MT Bold
 Gujarati Sangam MN
@@ -419,8 +428,10 @@ LilyUPC
 LilyUPC Bold
 LilyUPC Bold Italic
 LilyUPC Italic
+Lucida Bright
 Lucida Console
 Lucida Grande
+Lucida Sans Typewriter
 Lucida Sans Unicode
 LucidaGrande
 MS Gothic
@@ -590,6 +601,7 @@ Palatino Linotype Bold Italic
 Palatino Linotype Italic
 Papyrus
 Papyrus Condensed
+Perpetua
 PilGi Regular
 Pilgiche
 Plantagenet Cherokee
@@ -599,6 +611,8 @@ Raanana Bold
 RaananaBold
 Raavi
 Raavi Bold
+Rockwell
+Rockwell Extra Bold
 Rod
 STFangsong
 STHeiti

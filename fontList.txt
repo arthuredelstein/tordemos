@@ -79,6 +79,7 @@ Arial Unicode
 Arial Unicode MS
 ArialHB
 ArialHBBold
+Arimo
 Athelas Bold
 Athelas Bold Italic
 Athelas Italic
@@ -769,6 +770,7 @@ Times New Roman Bold Italic
 Times New Roman Italic
 Times.dfont
 TimesLTMM
+Tinos
 Traditional Arabic
 Traditional Arabic Bold
 Trebuchet MS

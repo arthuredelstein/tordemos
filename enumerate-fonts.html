@@ -27,15 +27,17 @@
       return testSpan.offsetWidth;
     };
 
+    let width0 = null;
+
     // Determines whether a code point is available.
     let isFontPresent = function (fontName) {
       // Measure the font width twice: once with serif as fallback
       // and once with sans-serif as fallback. Under the assumption
       // that serif and sans-serif have different widths, only if
       // the font is present will the resulting widths be equal.
+      width0 = width0 || measureWidthForFont("EnumerationFallback");
       let width1 = measureWidthForFont("'" + fontName + "', EnumerationFallback");
-      let width2 = measureWidthForFont("EnumerationFallback");
-      return width1 !== width2;
+      return width0 !== width1;
     };
 
     // Takes a list of possible fonts, and returns two lists:

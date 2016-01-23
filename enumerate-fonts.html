@@ -111,8 +111,8 @@
       let fontList = yield retrieveFontList(),
       [fontsPresent, fontsAbsent] = enumerateFonts(fontList);
       testSpan.style.display = "none";
-      document.getElementById("found").innerHTML = htmlList(fontsPresent);
-      document.getElementById("notfound").innerHTML = htmlList(fontsAbsent);
+      document.getElementById("found").innerHTML = htmlFontList(fontsPresent);
+      document.getElementById("notfound").innerHTML = htmlFontList(fontsAbsent);
     });
 
   </script>

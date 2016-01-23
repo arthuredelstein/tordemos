@@ -56,12 +56,13 @@
       return [fontsPresent, fontsAbsent];
     };
 
-    // Generates an HTML list of each item
-    // in the array `items`.
-    let htmlList = function (items) {
+    // Generates an HTML list of each font
+    // in the array `fonts`. The item is
+    // displayed in that font.
+    let htmlFontList = function (fonts) {
       let list = "<ul>";
-      for (let item of items) {
-        list += "<li>" + item + "</li>";
+      for (let font of fonts) {
+        list += "<li style='font-family:" + font + ";'>" + font + "</li>";
       }
       list += "</ul>";
       return list;

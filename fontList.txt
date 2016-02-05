@@ -1,4 +1,5 @@
 .Helvetica Neue DeskInterface
+.Lucida Grande UI
 Aharoni Bold
 Al Bayan Bold
 Al Bayan Plain
@@ -432,6 +433,7 @@ LilyUPC Italic
 Lucida Bright
 Lucida Console
 Lucida Grande
+Lucida Grande UI
 Lucida Sans Typewriter
 Lucida Sans Unicode
 LucidaGrande

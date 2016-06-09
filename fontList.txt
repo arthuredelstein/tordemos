@@ -871,3 +871,5 @@ Zapfino
 ＭＳ 明朝
 ＭＳ Ｐゴシック
 ＭＳ Ｐ明朝a
+GeoSlab 703 Lt BT
+Wingdings 2

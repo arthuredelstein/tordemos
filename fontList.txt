@@ -109,6 +109,7 @@ BiauKai
 Big Caslon
 Big Caslon Medium
 BigCaslon
+Bitstream Charter
 Bodoni MT
 Book Antiqua
 Browallia New
@@ -208,6 +209,9 @@ David
 David Bold
 DecoType Naskh
 DecoTypeNaskh
+Deja Vu Sans
+Deja Vu Sans Mono
+Deja Vu Serif
 Devanagari MT
 Devanagari MT Bold
 Devanagari Sangam MN

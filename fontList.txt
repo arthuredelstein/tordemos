@@ -209,9 +209,9 @@ David
 David Bold
 DecoType Naskh
 DecoTypeNaskh
-Deja Vu Sans
-Deja Vu Sans Mono
-Deja Vu Serif
+DejaVu Sans
+DejaVu Sans Mono
+DejaVu Serif
 Devanagari MT
 Devanagari MT Bold
 Devanagari Sangam MN

@@ -3,19 +3,25 @@
  <head>
   <meta charset="utf-8" />
   <title></title>
+
  </head>
  <body>
   <div>Locale found: <span id="locale"></span></div>
   <script>
-    let pref = function (k, v) {
-      console.log(k, v);
-      if (k === "general.useragent.locale") {
-        document.getElementById("locale").innerHTML = v;
-      }
+    let pref = sticky_pref = (k,v) => console.log(k + " -> " + v);
+    let loadScript = function (url) {
+      console.log("Attempting to load: " + url);
+      let scriptElement = document.createElement("script");
+      scriptElement.type = 'text/javascript';
+      document.body.appendChild(scriptElement);
+      scriptElement.src = url;
     };
+    // With redirects:
+    loadScript("https://torpat.ch/resource"); // redirects to resource:///defaults/preferences/webide-prefs.js
+    loadScript("https://torpat.ch/chrome"); // redirects to chrome://browser/content/browser.xul
+    // Without redirects:
+    loadScript("resource:///defaults/preferences/firefox.js");
   </script>
-  <script src="resource:///defaults/preferences/firefox.js"></a>
-  <script src="resource:///defaults/preferences/000-tor-browser.js"></a>
  </body>
 </html>
 

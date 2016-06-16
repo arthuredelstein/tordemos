@@ -5,14 +5,16 @@
   <title></title>
  </head>
  <body>
-  <div>Locale found: <span id="locale"><span></div>
+  <div>Locale found: <span id="locale"></span></div>
   <script>
     let pref = function (k, v) {
+      console.log(k, v);
       if (k === "general.useragent.locale") {
         document.getElementById("locale").innerHTML = v;
       }
     };
   </script>
+  <script src="resource:///defaults/preferences/firefox.js"></a>
   <script src="resource:///defaults/preferences/000-tor-browser.js"></a>
  </body>
 </html>

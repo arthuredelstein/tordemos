@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+  <div>Locale found: <span id="locale"><span></div>
+  <script>
+    let pref = function (k, v) {
+      if (k === "general.useragent.locale") {
+        document.getElementById("locale").innerHTML = v;
+      }
+    };
+  </script>
+  <script src="resource:///defaults/preferences/000-tor-browser.js"></a>
+ </body>
+</html>
+

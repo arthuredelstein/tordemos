@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>resource:// URI XHR demo</title>
+ </head>
+ <body>
+  <script>
+    let isChromeFilePresent = function (url) {
+      let msg = "";
+      try {
+        var http = new XMLHttpRequest();
+        http.open('HEAD', url, false);
+        http.send();
+        msg = http.status;
+      } catch(err) {
+        msg = err.toString();
+      }
+      return msg.contains("Access to restricted URI denied");
+    };
+    let showIfChromeFileIsPresent = function (url) {
+      console.log(url + ": " + isChromeFilePresent(url));
+    };
+
+    ["chrome://torbutton/locale/aboutTor.properties",
+     "resource:///chrome.manifest",]
+     .map(showIfChromeFileIsPresent)
+  </script>
+ </body>
+</html>
+

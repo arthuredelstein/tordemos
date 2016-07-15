@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+<body>
+<div id="result" style="white-space:pre";></div>
+
+<script>
+// Extensions to check
+var extensions = [
+  {"name":"FireShot", "url":"chrome://fireshot/content/", "enabled":true},
+  {"name":"FireBug", "url":"chrome://firebug/content/", "enabled":true},
+  {"name":"TorButton", "url":"chrome://torbutton/content/torbutton.js", "enabled": true},
+  {"name":"Down Them All", "url":"chrome://dta/content/", "enabled":true},
+  {"name":"Download Helper", "url":"chrome://dwhelper/content/", "enabled":true},  
+  {"name":"Skype Click to Call", "url":"resource://skype_ff_extension-at-jetpack/", "enabled":true},
+  {"name":"Mcafee VScore", "url":"chrome://vscore/content/", "enabled":true}
+];
+
+// Create an iframe for each extension
+for (var extension of extensions) {
+  // Try to load the URL in an IFRAME by redirection
+  var ifr = document.createElement("iframe");
+  ifr.src="https://urlecho.appspot.com/echo?status=301&Location=" + 
+          encodeURIComponent(extension.url) +
+          "&body=Attempting%20to%20load%20" + extension.name;
+  
+  // If the IFRAME load event fires, the extension doesn't exist
+  ifr.onload = (function (ext){
+    return function () {
+      ext.enabled = false;
+    }
+  })(extension);
+  ifr.onerror = function () {
+    return console.log(extension);
+  };
+  // Make it work...
+  document.body.appendChild(ifr);
+}
+
+// Wait and process results
+setTimeout(
+  function() { 
+    report = "";
+    for (var extension of extensions) {
+      report += extension.name + 
+                " -> " + 
+                extension.enabled + 
+                "\n";
+    }
+    document.getElementById("result").innerHTML = report;
+  }, 5000);
+</script>
+
+</body>
+</html>
+

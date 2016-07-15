@@ -8,7 +8,7 @@
 
 <script>
 // Extensions to check
-var extensions = [
+let extensions = [
   {"name":"FireShot", "url":"chrome://fireshot/content/", "enabled":true},
   {"name":"FireBug", "url":"chrome://firebug/content/", "enabled":true},
   {"name":"TorButton", "url":"chrome://torbutton/content/torbutton.js", "enabled": true},
@@ -18,9 +18,9 @@ var extensions = [
   {"name":"Mcafee VScore", "url":"chrome://vscore/content/", "enabled":true}
 ];
 
-var showResults = function() { 
-  report = "";
-  for (var extension of extensions) {
+let showResults = function() { 
+  let report = "";
+  for (let extension of extensions) {
     report += extension.name + 
               " -> " + 
               extension.enabled + 
@@ -30,9 +30,9 @@ var showResults = function() {
 };
 
 // Create an iframe for each extension
-for (var extension of extensions) {
+for (let extension of extensions) {
   // Try to load the URL in an IFRAME by redirection
-  var ifr = document.createElement("iframe");
+  let ifr = document.createElement("iframe");
   ifr.src="https://urlecho.appspot.com/echo?status=301&Location=" + 
           encodeURIComponent(extension.url) +
           "&body=Attempting%20to%20load%20" + extension.name;
@@ -47,10 +47,6 @@ for (var extension of extensions) {
   // Make it work...
   document.body.appendChild(ifr);
 }
-
-// Wait and process results
-setTimeout(
-  }, 5000);
 </script>
 
 </body>

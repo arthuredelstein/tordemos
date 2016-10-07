@@ -7,15 +7,14 @@
   </title>
  </head>
  <body>
-<!--  <div id="location"></div>
-  <script src="https://torpat.ch/geolocate.js"></script>
+  <iframe id="locationIframe"
+          src="https://torpat.ch/geolocate.html"></iframe>
+  <div id="result"></div>
   <script>
-    geolocate(function (position) {
-      let result = document.getElementById("location");
-      result.innerHTML = `Location: ${position.coords.latitude}, ${position.coords.longitude}`;
-    });
-  </script> -->
-<iframe src="https://torpat.ch/geolocate.html"></iframe>
+    let iframe = document.getElementById("locationIframe");
+    let resultDiv = document.getElementById("result");
+    window.addEventListener("message", e => resultDiv.innerHTML = e.data);
+  </script>
  </body>
 </html>
 

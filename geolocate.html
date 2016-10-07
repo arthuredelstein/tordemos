@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf8"/>
+  <title>
+   Geolocation demo
+  </title>
+ </head>
+ <body>
+  <div id="location"></div>
+  <script src="https://torpat.ch/geolocate.js"></script>
+  <script>
+    geolocate(function (position) {
+      let result = document.getElementById("location");
+      result.innerHTML = `Location: ${position.coords.latitude}, ${position.coords.longitude}`;
+    });
+  </script>
+ </body>
+</html>
+

@@ -7,6 +7,11 @@
  <body>
   <p id="jsOverHTTPPara">JavaScript .js file sent over HTTP has not run.  This is a good thing.</p>
   <script src="http://www.bennish.net/mixed-content/mixed-content.js"></script>
+  <script>
+    if (typeof(jsOverHttpRan) === typeof(Function)) {
+      jsOverHttpRan();
+    }
+  </script>
  </body>
 </html>
 

@@ -11,6 +11,7 @@
    <div style="font-family: monospace; font-size: 14px;" id="results">
    </div>
    <script>
+    // Returns true if the camera width is greater than a threshold.
     const widthGreaterThan = async function (deviceId, threshold) {
       try {
         await navigator.mediaDevices.getUserMedia(
@@ -22,6 +23,7 @@
       }
     };
 
+    // Returns true if the camera height is greater than a threshold.
     const heightGreaterThan = async function (deviceId, threshold) {
       try {
         await navigator.mediaDevices.getUserMedia(
@@ -33,6 +35,7 @@
       }
     };
 
+    // Find an integer x between min and max, using a binary search.
     const integerBinarySearch = async function integerBinarySearch (answerGreaterThan, [min, max]) {
       if (min === max) {
         return min;
@@ -43,12 +46,14 @@
                                        tooLow ? [middle + 1, max] : [min, middle]);
     }
 
+    // Find the dimensions of the device with given deviceId.
     const getDimensions = async function (deviceId) {
       let width = await integerBinarySearch(w => widthGreaterThan(deviceId, w), [1, 20000]);
       let height = await integerBinarySearch(h => heightGreaterThan(deviceId, h), [1, 20000]);
       return { deviceId, width, height };
     };
 
+    // Get a list of camera descriptors.
     const getCameraDescriptors = async function () {
       let devices = await navigator.mediaDevices.enumerateDevices();
       let cameraIds = devices.filter(device => device.kind === "videoinput")
@@ -56,22 +61,27 @@
       return Promise.all(cameraIds.map(getDimensions));
     }
 
+    // Display the ids and dimensions of all cameras.
     const showCameraDimensions = function (descriptors) {
       let results = "";
       for (let { deviceId, width, height } of descriptors) {
         results += `${deviceId}: ${width} x ${height}\n`;
       }
+      if (descriptors.length === 0) {
+        results = "None found.\n";
+      }
       let resultsDiv = document.getElementById("results");
       resultsDiv.innerText = results;
     };
 
-    const runTest = async function () {
+    // Run the whole demo.
+    const runDemo = async function () {
       let descriptors = await getCameraDescriptors();
       console.log(descriptors);
       showCameraDimensions(descriptors);
     };
 
-    runTest();
+    runDemo();
    </script>
  </body>
 </html>

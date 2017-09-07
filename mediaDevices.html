@@ -10,15 +10,15 @@
       new Promise(resolve => setTimeout(() => resolve(returnValue), timeMs));
 
     const tryMaxWidth = testWidth => navigator.mediaDevices.getUserMedia(
-        { video : { width : { max : testWidth }}});
+        { video : { width : { max : testWidth }, height : { max : 1 }}});
 
     async function runTest() {
       for (let testWidth = 100; testWidth < 5000; ++testWidth) {
-        const result = await Promise.race([sleep(10, "wake"),
-                                           tryMaxWidth(testWidth)])
-        if (result === "wake") {
-          console.log(`testWidth: ${testWidth}`);
-          break;
+        try {
+          await tryMaxWidth(testWidth);
+        } catch (e) {
+          if (e.name === "NotAllowedError")
+          console.log(e.name);
         }
       }
     }

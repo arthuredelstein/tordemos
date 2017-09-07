@@ -6,23 +6,42 @@
  </head>
  <body>
    <script>
-    const sleep = (timeMs, returnValue) =>
-      new Promise(resolve => setTimeout(() => resolve(returnValue), timeMs));
-
-    const tryMaxWidth = testWidth => navigator.mediaDevices.getUserMedia(
-        { video : { width : { max : testWidth }, height : { max : 1 }}});
-
-    async function runTest() {
-      for (let testWidth = 100; testWidth < 5000; ++testWidth) {
-        try {
-          await tryMaxWidth(testWidth);
-        } catch (e) {
-          if (e.name === "NotAllowedError")
-          console.log(e.name);
-        }
+    const widthGreaterThan = async function (threshold) {
+      try {
+        await navigator.mediaDevices.getUserMedia(
+          { video : { width : { max : threshold },
+                      frameRate : { max : 1 }}});
+      } catch (e) {
+        return (e.constraint === "width");
       }
+    };
+
+    const heightGreaterThan = async function (threshold) {
+      try {
+        await navigator.mediaDevices.getUserMedia(
+          { video : { height : { max : threshold },
+                      frameRate : { max : 1 }}});
+      } catch (e) {
+        return (e.constraint === "height");
+      }
+    };
+
+    const integerBinarySearch = async function integerBinarySearch (answerGreaterThan, [min, max]) {
+      if (min === max) {
+        return min;
+      }
+      let middle = Math.floor((min + max) / 2);
+      let tooLow = await answerGreaterThan(middle);
+      return await integerBinarySearch(answerGreaterThan,
+                                       tooLow ? [middle + 1, max] : [min, middle]);
     }
-    runTest();
+
+    const getDimensions = async function () {
+      let width = await integerBinarySearch(widthGreaterThan, [1, 20000]);
+      let height = await integerBinarySearch(heightGreaterThan, [1, 20000]);
+      console.log(width, height);
+      return { width, height };
+    };
    </script>
  </body>
 </html>

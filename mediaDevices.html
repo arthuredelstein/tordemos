@@ -6,20 +6,22 @@
  </head>
  <body>
    <script>
-    const widthGreaterThan = async function (threshold) {
+    const widthGreaterThan = async function (deviceId, threshold) {
       try {
         await navigator.mediaDevices.getUserMedia(
-          { video : { width : { max : threshold },
+          { video : { deviceId,
+                      width : { max : threshold },
                       frameRate : { max : 1 }}});
       } catch (e) {
         return (e.constraint === "width");
       }
     };
 
-    const heightGreaterThan = async function (threshold) {
+    const heightGreaterThan = async function (deviceId, threshold) {
       try {
         await navigator.mediaDevices.getUserMedia(
-          { video : { height : { max : threshold },
+          { video : { deviceId,
+                      height : { max : threshold },
                       frameRate : { max : 1 }}});
       } catch (e) {
         return (e.constraint === "height");
@@ -36,12 +38,18 @@
                                        tooLow ? [middle + 1, max] : [min, middle]);
     }
 
-    const getDimensions = async function () {
-      let width = await integerBinarySearch(widthGreaterThan, [1, 20000]);
-      let height = await integerBinarySearch(heightGreaterThan, [1, 20000]);
-      console.log(width, height);
-      return { width, height };
+    const getDimensions = async function (deviceId) {
+      let width = await integerBinarySearch(w => widthGreaterThan(deviceId, w), [1, 20000]);
+      let height = await integerBinarySearch(h => heightGreaterThan(deviceId, h), [1, 20000]);
+      return { deviceId, width, height };
     };
+
+    const getCameraDescriptors = async function () {
+      let devices = await navigator.mediaDevices.enumerateDevices();
+      let cameraIds = devices.filter(device => device.kind === "videoinput")
+                             .map(camera => camera.deviceId);
+      return cameraIds.map(getDimensions);
+    }
    </script>
  </body>
 </html>

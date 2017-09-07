@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>MediaDevices fingerprinting</title>
+ </head>
+ <body>
+   <script>
+    const sleep = (timeMs, returnValue) =>
+      new Promise(resolve => setTimeout(() => resolve(returnValue), timeMs));
+
+    const tryMaxWidth = testWidth => navigator.mediaDevices.getUserMedia(
+        { video : { width : { max : testWidth }}});
+
+    async function runTest() {
+      for (let testWidth = 100; testWidth < 5000; ++testWidth) {
+        const result = await Promise.race([sleep(10, "wake"),
+                                           tryMaxWidth(testWidth)])
+        if (result === "wake") {
+          console.log(`testWidth: ${testWidth}`);
+        }
+      }
+    }
+    runTest();
+   </script>
+ </body>
+</html>
+

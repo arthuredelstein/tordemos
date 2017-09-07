@@ -5,6 +5,11 @@
   <title>MediaDevices fingerprinting</title>
  </head>
  <body>
+   <h3>
+     Detected cameras (width x height)
+   </h3>
+   <div style="font-family: monospace; font-size: 14px;" id="results">
+   </div>
    <script>
     const widthGreaterThan = async function (deviceId, threshold) {
       try {
@@ -48,8 +53,25 @@
       let devices = await navigator.mediaDevices.enumerateDevices();
       let cameraIds = devices.filter(device => device.kind === "videoinput")
                              .map(camera => camera.deviceId);
-      return cameraIds.map(getDimensions);
+      return Promise.all(cameraIds.map(getDimensions));
     }
+
+    const showCameraDimensions = function (descriptors) {
+      let results = "";
+      for (let { deviceId, width, height } of descriptors) {
+        results += `${deviceId}: ${width} x ${height}\n`;
+      }
+      let resultsDiv = document.getElementById("results");
+      resultsDiv.innerText = results;
+    };
+
+    const runTest = async function () {
+      let descriptors = await getCameraDescriptors();
+      console.log(descriptors);
+      showCameraDimensions(descriptors);
+    };
+
+    runTest();
    </script>
  </body>
 </html>

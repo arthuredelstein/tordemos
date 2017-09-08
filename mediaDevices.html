@@ -18,7 +18,7 @@
     const widthBetween = async function (deviceId, min, max) {
       try {
         await navigator.mediaDevices.getUserMedia(
-          { video : { deviceId,
+          { video : { deviceId : { exact : deviceId },
                       width : { min, max },
                       frameRate : { max : 1 }}});
       } catch (e) {
@@ -30,7 +30,7 @@
     const heightBetween = async function (deviceId, min, max) {
       try {
         await navigator.mediaDevices.getUserMedia(
-          { video : { deviceId,
+          { video : { deviceId : { exact : deviceId },
                       height : { min, max },
                       frameRate : { max : 1 }}});
       } catch (e) {

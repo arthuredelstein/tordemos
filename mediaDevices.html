@@ -2,55 +2,88 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>MediaDevices fingerprinting</title>
+  <title>
+    Demo: Camera pixel width and height detection with navigator.mediaDevices in Firefox
+  </title>
  </head>
  <body>
    <h3>
-     Detected cameras: width x height
+     Demo: Camera pixel width and height detection with navigator.mediaDevices in Firefox
    </h3>
-   <div style="font-family: monospace; font-size: 14px;" id="results">
+   <div style="font-family: monospace; font-size: 14px; white-space: pre;" id="results">
+     Please wait...
    </div>
    <script>
-    // Returns true if the camera width is greater than a threshold.
-    const widthGreaterThan = async function (deviceId, threshold) {
+    // Returns true if there is a camera width between min and max
+    const widthBetween = async function (deviceId, min, max) {
       try {
         await navigator.mediaDevices.getUserMedia(
           { video : { deviceId,
-                      width : { max : threshold },
+                      width : { min, max },
                       frameRate : { max : 1 }}});
       } catch (e) {
-        return (e.constraint === "width");
+        return (e.constraint === "frameRate");
       }
     };
 
-    // Returns true if the camera height is greater than a threshold.
-    const heightGreaterThan = async function (deviceId, threshold) {
+    // Returns true if there is a camera height between min and max.
+    const heightBetween = async function (deviceId, min, max) {
       try {
         await navigator.mediaDevices.getUserMedia(
           { video : { deviceId,
-                      height : { max : threshold },
+                      height : { min, max },
                       frameRate : { max : 1 }}});
       } catch (e) {
-        return (e.constraint === "height");
+        return (e.constraint === "frameRate");
       }
     };
 
     // Find an integer x between min and max, using a binary search.
-    const integerBinarySearch = async function integerBinarySearch (answerGreaterThan, [min, max]) {
+    const integerBinarySearchInner = async function integerBinarySearchInner (answerGreaterThan, [min, max]) {
       if (min === max) {
         return min;
       }
       let middle = Math.floor((min + max) / 2);
       let tooLow = await answerGreaterThan(middle);
-      return await integerBinarySearch(answerGreaterThan,
-                                       tooLow ? [middle + 1, max] : [min, middle]);
+      return await integerBinarySearchInner(answerGreaterThan,
+                                            tooLow ? [middle + 1, max] : [min, middle]);
+    }
+
+    // Find an integer x between min and max, using a binary search. Returns null if the
+    // value is outside the range.
+    const integerBinarySearch = async function (answerGreaterThan, [min, max]) {
+      if (!(await answerGreaterThan(min)) ||
+          (await answerGreaterThan(max))) {
+        return null;
+      } else {
+        return integerBinarySearchInner(answerGreaterThan, [min, max]);
+      }
+    }
+
+    // Find the available widths and heights for the camera with deviceId.
+    const getAvailableSizes = async function (deviceId, betweenFunc) {
+      let availableX = [];
+      let minX = 0
+      while (true) {
+        minX = await integerBinarySearch(
+          async function (x) {
+            return !(await betweenFunc(deviceId, 1 + minX, x));
+          },
+          [1 + minX, 4000]);
+        if (minX === null) {
+          break;
+        } else {
+          availableX.push(minX);
+        }
+      }
+      return availableX;
     }
 
     // Find the dimensions of the device with given deviceId.
     const getDimensions = async function (deviceId) {
-      let width = await integerBinarySearch(w => widthGreaterThan(deviceId, w), [1, 20000]);
-      let height = await integerBinarySearch(h => heightGreaterThan(deviceId, h), [1, 20000]);
-      return { deviceId, width, height };
+      let [widths, heights] = await Promise.all([getAvailableSizes(deviceId, widthBetween),
+                                                 getAvailableSizes(deviceId, heightBetween)]);
+      return { deviceId, widths, heights };
     };
 
     // Get a list of camera descriptors.
@@ -63,12 +96,9 @@
 
     // Display the ids and dimensions of all cameras.
     const showCameraDimensions = function (descriptors) {
-      let results = "";
-      for (let { deviceId, width, height } of descriptors) {
-        results += `${deviceId}: ${width} x ${height}\n`;
-      }
-      if (descriptors.length === 0) {
-        results = "None found.\n";
+      let results = `${descriptors.length} camera(s) found.\n`;
+      for (let { deviceId, widths, heights } of descriptors) {
+        results += `\nCamera: ${deviceId}\n   widths: ${widths.join(", ")}\n   heights: ${heights.join(", ")}\n`;
       }
       let resultsDiv = document.getElementById("results");
       resultsDiv.innerText = results;

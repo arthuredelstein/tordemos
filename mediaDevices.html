@@ -98,7 +98,7 @@
     const showCameraDimensions = function (descriptors) {
       let results = `${descriptors.length} camera(s) found.\n`;
       for (let { deviceId, widths, heights } of descriptors) {
-        results += `\nCamera: ${deviceId}\n   widths: ${widths.join(", ")}\n   heights: ${heights.join(", ")}\n`;
+        results += `\nCamera: ${deviceId}\n    widths: ${widths.join(", ")}\n   heights: ${heights.join(", ")}\n`;
       }
       let resultsDiv = document.getElementById("results");
       resultsDiv.innerText = results;

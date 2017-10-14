@@ -10,7 +10,10 @@
    <script>
     const mathString = "<math><mrow><msup><mi>&nbsp; a </mi><mn>2</mn></msup> <mo> + </mo> <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c </mi><mn>2</mn></msup> </mrow> </math>";
     let mathDiv = document.getElementById("math");
-    window.setInterval(() => mathDiv.innerHTML = mathString, 1000);
+    window.setInterval(function () {
+      mathDiv.innerHTML = mathString;
+      console.log(`attempt: ${Date.now}`);
+    }, 1000);
    </script>
  </body>
 </html>

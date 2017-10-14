@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Security change demo</title>
+ </head>
+ <body>
+   <div>Pythagorean theorem:</div>
+   <div id="math"></div>
+   <script>
+    const mathString = "<math><mrow><msup><mi>&nbsp; a </mi><mn>2</mn></msup> <mo> + </mo> <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c </mi><mn>2</mn></msup> </mrow> </math>";
+    let mathDiv = document.getElementById("math");
+    window.setInterval(() => mathDiv.innerHTML = mathString, 1000);
+   </script>
+ </body>
+</html>
+

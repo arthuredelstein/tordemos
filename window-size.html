@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Window size</title>
+ </head>
+ <body>
+   <div style="font-size: 48px;" id="size">
+   </div>
+   <script>
+    let updateSizeDisplay = () => {
+      sizeDiv.innerText = `${window.innerWidth} x ${window.innerHeight}`
+    };
+    let sizeDiv = document.getElementById("size");
+    window.addEventListener("resize", updateSizeDisplay);
+    updateSizeDisplay();
+   </script>
+ </body>
+</html>
+

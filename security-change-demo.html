@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Security change demo</title>
+ </head>
+ <body>
+   <div>Below a script repeatedly attempts to render the Pythagorean theorem in MathML. In Tor Browser, at Low security setting, the formula will render correctly. At Medium or High, the formula will not be rendered correctly. You can change the security setting and the rendering will change on the fly. Note that this tab can be in the background, but the attempts continue.</div>
+   <div id="math"></div>
+   <script>
+    const mathString = "<math><mrow><msup><mi>&nbsp; a </mi><mn>2</mn></msup> <mo> + </mo> <msup><mi> b </mi><mn>2</mn></msup> <mo> = </mo> <msup><mi> c </mi><mn>2</mn></msup> </mrow> </math>";
+    let mathDiv = document.getElementById("math");
+    window.setInterval(function () {
+      mathDiv.innerHTML = mathString;
+      console.log(`attempt: ${Date.now()}`);
+      console.log(`height: ${mathDiv.clientHeight}`);
+    }, 1000);
+   </script>
+ </body>
+</html>
+

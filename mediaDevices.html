@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>
+    Demo: Camera pixel width and height detection with navigator.mediaDevices in Firefox
+  </title>
+ </head>
+ <body>
+   <h3>
+     Demo: Camera pixel width and height detection with navigator.mediaDevices in Firefox
+   </h3>
+   <div style="font-family: monospace; font-size: 14px; white-space: pre;" id="results">
+     Please wait...
+   </div>
+   <script>
+    // Returns true if there is a camera width between min and max
+    const widthBetween = async function (deviceId, min, max) {
+      try {
+        await navigator.mediaDevices.getUserMedia(
+          { video : { deviceId : { exact : deviceId },
+                      width : { min, max },
+                      frameRate : { max : 1 }}});
+      } catch (e) {
+        return (e.constraint === "frameRate");
+      }
+    };
+
+    // Returns true if there is a camera height between min and max.
+    const heightBetween = async function (deviceId, min, max) {
+      try {
+        await navigator.mediaDevices.getUserMedia(
+          { video : { deviceId : { exact : deviceId },
+                      height : { min, max },
+                      frameRate : { max : 1 }}});
+      } catch (e) {
+        return (e.constraint === "frameRate");
+      }
+    };
+
+    // Find an integer x between min and max, using a binary search.
+    const integerBinarySearchInner = async function integerBinarySearchInner (answerGreaterThan, [min, max]) {
+      if (min === max) {
+        return min;
+      }
+      let middle = Math.floor((min + max) / 2);
+      let tooLow = await answerGreaterThan(middle);
+      return await integerBinarySearchInner(answerGreaterThan,
+                                            tooLow ? [middle + 1, max] : [min, middle]);
+    }
+
+    // Find an integer x between min and max, using a binary search. Returns null if the
+    // value is outside the range.
+    const integerBinarySearch = async function (answerGreaterThan, [min, max]) {
+      if (!(await answerGreaterThan(min)) ||
+          (await answerGreaterThan(max))) {
+        return null;
+      } else {
+        return integerBinarySearchInner(answerGreaterThan, [min, max]);
+      }
+    }
+
+    // Find the available widths and heights for the camera with deviceId.
+    const getAvailableSizes = async function (deviceId, betweenFunc) {
+      let availableX = [];
+      let minX = 0
+      while (true) {
+        minX = await integerBinarySearch(
+          async function (x) {
+            return !(await betweenFunc(deviceId, 1 + minX, x));
+          },
+          [1 + minX, 4000]);
+        if (minX === null) {
+          break;
+        } else {
+          availableX.push(minX);
+        }
+      }
+      return availableX;
+    }
+
+    // Find the dimensions of the device with given deviceId.
+    const getDimensions = async function (deviceId) {
+      let [widths, heights] = await Promise.all([getAvailableSizes(deviceId, widthBetween),
+                                                 getAvailableSizes(deviceId, heightBetween)]);
+      return { deviceId, widths, heights };
+    };
+
+    // Get a list of camera descriptors.
+    const getCameraDescriptors = async function () {
+      let devices = await navigator.mediaDevices.enumerateDevices();
+      let cameraIds = devices.filter(device => device.kind === "videoinput")
+                             .map(camera => camera.deviceId);
+      return Promise.all(cameraIds.map(getDimensions));
+    }
+
+    // Display the ids and dimensions of all cameras.
+    const showCameraDimensions = function (descriptors) {
+      let results = `${descriptors.length} camera(s) found.\n`;
+      for (let { deviceId, widths, heights } of descriptors) {
+        results += `\nCamera: ${deviceId}\n    widths: ${widths.join(", ")}\n   heights: ${heights.join(", ")}\n`;
+      }
+      let resultsDiv = document.getElementById("results");
+      resultsDiv.innerText = results;
+    };
+
+    // Run the whole demo.
+    const runDemo = async function () {
+      let descriptors = await getCameraDescriptors();
+      console.log(descriptors);
+      showCameraDimensions(descriptors);
+    };
+
+    // Run it now!
+    runDemo();
+   </script>
+ </body>
+</html>
+

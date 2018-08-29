@@ -7,15 +7,17 @@
  <body>
   <canvas id="testCanvas" width="300" height="300"></canvas>
   <script>
-   var canvas = document.getElementById("testCanvas"),
-       context = canvas.getContext("2d");
-   context.fillStyle = "#0F8030";
-   context.fillRect(0, 0, 120, 75);
-   context.fillStyle = "#00FF00";
-   context.font = "48px sans serif";
-   context.rotate(-10*Math.PI/180);
-   context.fillText("Test", 10, 60);
-   imageData = context.getImageData(1, 1, 1, 1);
+   addEventListener("mousedown", function {
+     var canvas = document.getElementById("testCanvas"),
+     context = canvas.getContext("2d");
+     context.fillStyle = "#0F8030";
+     context.fillRect(0, 0, 120, 75);
+     context.fillStyle = "#00FF00";
+     context.font = "48px sans serif";
+     context.rotate(-10*Math.PI/180);
+     context.fillText("Test", 10, 60);
+     imageData = context.getImageData(1, 1, 1, 1);
+   });
   </script>
  </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo of pure CSS OS detection via fonts</title>
+    <meta charset="utf8"/>
+    <style>
+     @font-face {
+       font-family: "Adobe Blank Linux";
+       src: url("./AdobeBlankRegular.ttf?not_linux=true")
+     }
+     @font-face {
+       font-family: "Adobe Blank Mac";
+       src: url("./AdobeBlankRegular.ttf?not_mac=true")
+     }
+     @font-face {
+       font-family: "Adobe Blank Windows";
+       src: url("./AdobeBlankRegular.ttf?not_windows=true")
+     }
+    </style>
+  </head>
+  <body>
+    <p>This page attempts to infer your operating system by CSS-only font detection.</p>
+    <p>Your likely operating system is:
+      <span style="font-family: Arimo, DejaVu Serif, Adobe Blank Linux;">Linux</span>
+      <span style="font-family: Lucida Grande, Adobe Blank Mac;">Mac</span>
+      <span style="font-family: Segoe UI, Adobe Blank Windows;">Windows</span>
+    </p>
+    <p>(You can inspect network requests to see how font presence was reported back to the server.)</p>
+  </body>
+</html>

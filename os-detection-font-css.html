@@ -5,25 +5,25 @@
     <meta charset="utf8"/>
     <style>
      @font-face {
-       font-family: "Adobe Blank Linux";
-       src: url("./AdobeBlankRegular.ttf?not_linux=true")
+       font-family: "Adobe Blank Not Linux";
+       src: url("./AdobeBlankRegular_not_linux.ttf")
      }
      @font-face {
-       font-family: "Adobe Blank Mac";
-       src: url("./AdobeBlankRegular.ttf?not_mac=true")
+       font-family: "Adobe Blank Not Mac";
+       src: url("./AdobeBlankRegular_not_mac.ttf")
      }
      @font-face {
-       font-family: "Adobe Blank Windows";
-       src: url("./AdobeBlankRegular.ttf?not_windows=true")
+       font-family: "Adobe Blank Not Windows";
+       src: url("./AdobeBlankRegular_not_windows.ttf")
      }
     </style>
   </head>
   <body>
     <p>This page attempts to infer your operating system by CSS-only font detection.</p>
     <p>Your likely operating system is:
-      <span style="font-family: Arimo, DejaVu Serif, Adobe Blank Linux;">Linux</span>
-      <span style="font-family: Lucida Grande, Adobe Blank Mac;">Mac</span>
-      <span style="font-family: Segoe UI, Adobe Blank Windows;">Windows</span>
+      <span style="font-family: Arimo, DejaVu Serif, Adobe Blank Not Linux;">Linux</span>
+      <span style="font-family: Lucida Grande, Adobe Blank Not Mac;">Mac</span>
+      <span style="font-family: Segoe UI, Adobe Blank Not Windows;">Windows</span>
     </p>
     <p>(You can inspect network requests to see how likely OS was reported back to the server.)</p>
   </body>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-maxSize = 2000
+maxSize = 8000
 
 for dim in ["width", "height", "device-width", "device-height"]:
   for i in range(maxSize):
